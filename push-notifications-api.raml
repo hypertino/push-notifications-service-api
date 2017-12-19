@@ -14,7 +14,7 @@ types:
     properties:
       platform: Platforms
       app_name: string
-      token: string
+      device_token: string
       user_id: string
 
   NotificationToken:
@@ -23,16 +23,11 @@ types:
       token_id: string
       platform: Platforms
       app_name: string
-      token: string
+      device_token: string
       user_id: string
       created_at:
         type: number
         format: long
-
-  TokenId:
-    type: object
-    properties:
-      token_id: string
 
   PushNotification:
     type: object
@@ -61,10 +56,6 @@ types:
   delete:
     responses:
        204:
-
-/notifications:
-  post:
-    body: PushNotification
 
 /users/{user_id}/notifications:
   uriParameters:
