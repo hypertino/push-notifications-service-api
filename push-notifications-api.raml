@@ -57,6 +57,10 @@ types:
     responses:
        204:
 
+/notifications:
+  post:
+    body: PushNotification
+
 /users/{user_id}/notifications:
   uriParameters:
     user_id:
